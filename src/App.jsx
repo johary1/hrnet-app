@@ -1,35 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { EmployeeProvider } from "./context/EmployeeContext";
 
-function App() {
-  const [count, setCount] = useState(0)
+// pages
 
+import HomePage from "./pages/HomePage";
+import CreateEmployee from "./pages/CreateEmployee";
+import CurrentEmployees from "./pages/CurrentEmployees";
+import Error404 from "./pages/Error404";
+
+// components
+import Header from "./components/Header";
+// import Footer from "./components/Footer";
+
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <BrowserRouter>
+      <Header />
+      <EmployeeProvider>
+        <Routes>
+          <Route index element={<HomePage />} />
+          <Route path="/createemployee" element={<CreateEmployee />} />
+          <Route path="/currentemployees" element={<CurrentEmployees />} />
+          <Route path="*" element={<Error404 />} />
+        </Routes>
+        {/* <Footer /> */}
+      </EmployeeProvider>
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;
