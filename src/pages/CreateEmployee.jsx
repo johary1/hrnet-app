@@ -4,7 +4,7 @@ import CustomModal from "success-modal-customized";
 import departmentsData from "../data/departments.json";
 import statesData from "../data/states.json";
 import "./style/CreateEmployee.css";
-import "./style/MyModal.css";
+import "./style/CustomModal.css";
 import { validateForm } from "../utils";
 import DatePickerWrapper from "../components/DatePickerWrapper";
 import FormInput from "../components/FormInput";
