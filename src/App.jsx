@@ -18,7 +18,8 @@ const App = () => {
       <Header />
       <EmployeeProvider>
         <Routes>
-          <Route index element={<HomePage />} />
+          {/* <Route index element={<HomePage />} /> */}
+          <Route index element={<CreateEmployee />} />
           <Route path="/createemployee" element={<CreateEmployee />} />
           <Route path="/currentemployees" element={<CurrentEmployees />} />
           <Route path="*" element={<Error404 />} />
