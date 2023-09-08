@@ -3,7 +3,7 @@ const HomePage = () => {
   return (
     <div className="home__wrapper">
       <h1>WEALTH HEALTH - HRnet</h1>
-      <img src="/favicon.png" alt="WEALTH HEALTH logo" />
+      <img src="/logo-home.png" alt="WEALTH HEALTH logo" />
       <h2>Employee Management</h2>
     </div>
   );
