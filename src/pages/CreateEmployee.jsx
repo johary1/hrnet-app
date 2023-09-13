@@ -24,8 +24,7 @@ const CreateEmployee = () => {
   const [zipCode, setZipCode] = useState("");
   const [department, setDepartment] = useState("");
   const [formErrors, setFormErrors] = useState({});
-  // const [showSuccessModal, setShowSuccessModal] = useState(false);
-
+  
   const [showModal, setShowModal] = useState(false);
 
   const handleShowModal = () => {

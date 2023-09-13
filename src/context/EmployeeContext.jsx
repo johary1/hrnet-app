@@ -1,23 +1,27 @@
 import { createContext, useContext, useState, useEffect } from "react";
-
+import { fetchEmployeesFromLocalStorage } from "../service/employeeApi";
 const EmployeeContext = createContext();
 
 export const EmployeeProvider = ({ children }) => {
   const [employees, setEmployees] = useState([]);
 
-  // Load data from localStorage on component mount
   useEffect(() => {
-    const storedData = localStorage.getItem("employees");
-    if (storedData) {
-      setEmployees(JSON.parse(storedData));
-    }
+    const loadData = async () => {
+      try {
+        const storedData = fetchEmployeesFromLocalStorage();
+        if (storedData) {
+          setEmployees(storedData);
+        }
+        
+      } catch (error) {
+        console.error("Error loading employee data:", error);
+      }
+    };
+  
+    loadData();
   }, []);
 
-  // Save data to localStorage whenever employees change
-  // useEffect(() => {
-  //   localStorage.setItem("employees", JSON.stringify(employees));
-  // }, [employees]);
-
+  
   const addEmployee = (employee) => {
     setEmployees((prevEmployees) => [...prevEmployees, employee]);
   };

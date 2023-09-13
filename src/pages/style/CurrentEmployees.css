@@ -27,6 +27,11 @@
   color: var(--dark-green);
 }
 
+.employee-count {
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
 @media (max-width: 414px) {
   .employee-list__title {
     font-size: 22px;
@@ -56,6 +61,7 @@
 
 #entries-txt {
   margin-right: 10px;
+  font-weight: 700;
 }
 
 .search-form {
@@ -65,14 +71,17 @@
 
 #search-label {
   padding: 8px;
-  border: 1px solid #767676;
-  border-radius: 1px;
   height: 30px;
+  font-weight: 700;
 }
 
 #inlineFormInputGroup {
   height: 36px;
   border-radius: 1px;
+}
+
+.demo-buttons {
+  margin-bottom: 30px;
 }
 
 .no-result {
@@ -116,6 +125,13 @@ table.table tbody tr td {
   background-color: var(--light-green);
 }
 
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 40px;
+}
+
 /* Hover effect for table rows */
 table.table tbody tr:hover {
   color: var(--dark-green);
@@ -147,4 +163,8 @@ tr {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+i {
+  margin-left: 2px;
 }

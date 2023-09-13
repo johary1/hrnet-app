@@ -1,0 +1,30 @@
+.error {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.title-404 {
+  font-size: 4rem;
+}
+
+.text-404 {
+  font-size: 36px;
+}
+
+@media (max-width: 375px) {
+  .title-404 {
+    font-size: 3rem;
+  }
+
+  .text-404 {
+    font-size: 24px;
+  }
+}
+.back-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  margin: 50px auto;
+  text-decoration: underline !important;
+}

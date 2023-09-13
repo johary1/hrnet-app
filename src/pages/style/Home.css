@@ -3,8 +3,13 @@
   margin: auto;
   padding: 100px;
   text-align: center;
-  height: 70vh;
   color: var(--white);
+}
+
+@media (min-width: 768px) {
+  .home__wrapper {
+    height: 70vh;
+  }
 }
 .home__wrapper img {
   margin: 50px auto;

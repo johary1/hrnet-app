@@ -6,13 +6,19 @@ import Select from "../components/Select";
 import FormSearch from "../components/FormSearch";
 import Pagination from "../components/Pagination";
 import "./style/CurrentEmployees.css";
+import { fetchEmployeesFromMockApi } from "../service/employeeApi";
+import CustomModal from "success-modal-customized";
+import "./style/CustomModal.css";
 
 const CurrentEmployees = () => {
-  const { employees } = useEmployeeContext(); // Use the context hook to get employees data
+  const { employees,addEmployee } = useEmployeeContext();// Use the context hook to get employees data
   const [currentPage, setCurrentPage] = useState(1);
   const [employeesPerPage, setEmployeesPerPage] = useState(5);
 
   const [sortedEmployees, setSortedEmployees] = useState([]);
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
 
   // Update sortedEmployees state whenever employees changes
   useEffect(() => {
@@ -126,18 +132,37 @@ const CurrentEmployees = () => {
     setSortedEmployees(filteredEmployees);
     setHasSearchResults(filteredEmployees.length > 0);
   };
+  const [showModal, setShowModal] = useState(false);
+  const handleLoadMockData = async () => {
+    try {
+      // Fetch mock data from the API
+      const mockData = await fetchEmployeesFromMockApi();
+      console.log(mockData);
+
+      // Iterate over the mock data and add each employee to the context as mock data
+      for (const employee of mockData) {
+        addEmployee(employee, true); // Set isMockEmployee flag to true
+      }
+      // Show the custom modal with a success message
+      setShowModal(true);
+    } catch (error) {
+      console.error("Error loading mock data:", error);
+    }
+  };
 
   return (
     <div className="current-employees__wrapper">
       <Container id="employee-div">
+         {/* Conditionally render the overlay */}
+       {showModal && <div className="modal-overlay"></div>}
         <div className="employee-list__header">
           <h1 className="employee-list__title">Current Employees</h1>
+          <p className="employee-count">Total Employees: {employees.length}</p>
           <div className="employee-list__filter">
             <div className="show-entries">
               <span id="entries-txt">Show entries</span>
               <Select
                 options={[
-                  { value: 5, label: "5" },
                   { value: 10, label: "10" },
                   { value: 20, label: "20" },
                   { value: 50, label: "50" },
@@ -151,14 +176,18 @@ const CurrentEmployees = () => {
             </div>
           </div>
         </div>
+        <div className="demo-buttons">
+          <button onClick={handleLoadMockData}>Demo data</button>
+          <button onClick={() => window.location.reload()}>Clear demo</button>
+        </div>
         <div className="table-container">
           <Table responsive>
             <thead>
-              <tr>
+              <tr className="truncate">
                 {columns.slice(0, 4).map((column) => (
                   <th key={column.name} className="sticky-cell">
                     <div className="th-wrapper">
-                      <span>{column.name}</span>
+                    <span>{column.name}</span>
                       <i className="fas fa-sort" onClick={handleSortClick}></i>
                     </div>
                   </th>
@@ -197,6 +226,11 @@ const CurrentEmployees = () => {
           currentPage={currentPage}
         />
       </Container>
+      {/* Render the custom modal when showModal is true */}
+    {/* Conditionally render the modal */}
+    {showModal && (
+          <CustomModal id="custom-modal" show={showModal} handleClose={handleCloseModal} text="Demo data has been loaded!" />
+        )}
     </div>
   );
 };
