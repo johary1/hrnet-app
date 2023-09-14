@@ -1,7 +1,15 @@
 # Employee Management Application made with React + Vite
 
-Welcome to the Employee Management Application! This web application is designed to help you manage employee records effectively. You can create, search, and view employee details in a user-friendly interface.
-You can find the website here: https://hrnet-opc-p14.netlify.app/
+Welcome to the Employee Management Application called HRnet! This web application is designed to help you manage employee records effectively. You can create, search, and view employee details in a user-friendly interface.
+
+- This project was first written with Jquery plugins and now it has been converted in React. You can find the repository here: https://github.com/johary1/hrnet-jquery
+- Then it was convert into a react project with CRA: https://github.com/johary1/hrnet
+
+- Since there were several issues reported with CRA and it has been considered as outdated, I decided to use Vite. Here is an example of an article that discusses the topic: https://dev.to/ag2byte/create-react-app-is-officially-dead-h7o
+
+- You can find the website written in Jquery here: https://hrnet-opc-p14-jquery.netlify.app/
+
+- You can find the website converted in React + Vite here: https://hrnet-opc-p14.netlify.app/
 
 ## Table of Contents
 
