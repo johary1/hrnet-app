@@ -99,58 +99,69 @@ Click on Clear data button to delete Employee list from demo data.
 
 The project structure is organized as follows:
 
+```bash
+
 ├── public/
-│ ├── index.html
-│ ├── robots.txt
-│ ├── \_redirects
-| └── favicon.png
+│   ├── index.html
+│   ├── robots.txt
+│   ├── ...
+|   └── favicon.png
+
 ├── src/
-│ ├── assets/
-│ │ ├── font/
-│ │ ├── ...
-│ │ └── ...
-│ ├── components/
-│ │ ├── style/
-│ │ ├── ...
-│ │ ├── ...
-│ │ ├── ...
-│ │ └── ...
-│ │ ├── AddressForm.jsx
-│ │ ├── DatePickerWrapper.jsx
-│ │ ├── FormInput.jsx
-| | ├── FormSearch.jsx
-│ │ ├── Header.jsx
-│ │ ├── Pagination.jsx
-│ │ └── Select.jsx
-│ ├── context/
-│ │ ├── EmployeeContext.js
-│ │ └── ...
-│ ├── data/
-│ │ ├── departments.json
-│ │ ├── employees.json
-│ │ └── states.json
-│ ├── pages/
-| | ├── style/
-│ │ ├── ...
-│ │ ├── ...
-│ │ ├── ...
-│ │ └── ...
-| | ├── CreateEmployee.jsx
-│ │ ├── CurrentEmployees.jsx
-│ │ ├── Error404.jsx
-│ │ └── HomePage.jsx
-│ ├── service/
-│ │ ├── mockApi.js
-│ │ └── ...
-│ ├── App.jsx
-│ ├── main.jsx
-| ├── index.jsx
-│ ├── index.css
-│ └── ...
+│   ├── assets/
+│      ├── font/
+│          ├── ...
+│          └── ...
+│   ├── components/
+│       ├── style/
+│           ├── ...
+│           ├── ...
+│           ├── ...
+│           └── ...
+│   ├── AddressForm.jsx
+│   ├── DatePickerWrapper.jsx
+│   ├── FormInput.jsx
+|   ├── FormSearch.jsx
+│   ├── Header.jsx
+│   ├── Pagination.jsx
+│   └── Select.jsx
+
+│   ├── context/
+│       ├── EmployeeContext.js
+│       └── ...
+
+│   ├── data/
+│       ├── departments.json
+│       ├── employees.json
+│       └── states.json
+
+│   ├── pages/
+|       ├── style/
+│           ├── ...
+│           ├── ...
+│           ├── ...
+│           └── ...
+|   ├── CreateEmployee.jsx
+│   ├── CurrentEmployees.jsx
+│   ├── Error404.jsx
+│   └── HomePage.jsx
+
+│   ├── service/
+│       ├── mockApi.js
+│       └── ...
+
+│   ├── App.jsx
+│   ├── main.jsx
+|   ├── index.jsx
+│   ├── index.css
+│   └── ...
+
 ├── ...
 ├── package.json
 ├── README.md
 └── ...
+
+```
 
 ### Deployment
 
