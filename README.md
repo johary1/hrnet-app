@@ -1,6 +1,7 @@
 # Employee Management Application made with React + Vite
 
 Welcome to the Employee Management Application! This web application is designed to help you manage employee records effectively. You can create, search, and view employee details in a user-friendly interface.
+You can find the website here: https://hrnet-opc-p14.netlify.app/
 
 ## Table of Contents
 
@@ -43,6 +44,7 @@ The Employee Management Application is a React-based web application that allows
 - Context Api (for state management)
 - Mock API (for demo data)
 - External library "Success-modal-customized" : https://github.com/johary1/success-modal-customized
+- Lighthouse (for testing performance)
 
 ## Getting Started
 
@@ -112,6 +114,7 @@ The project structure is organized as follows:
 │      ├── font/
 │          ├── ...
 │          └── ...
+
 │   ├── components/
 │       ├── style/
 │           ├── ...
@@ -141,10 +144,10 @@ The project structure is organized as follows:
 │           ├── ...
 │           ├── ...
 │           └── ...
-|   ├── CreateEmployee.jsx
-│   ├── CurrentEmployees.jsx
-│   ├── Error404.jsx
-│   └── HomePage.jsx
+|       ├── CreateEmployee.jsx
+│       ├── CurrentEmployees.jsx
+│       ├── Error404.jsx
+│       └── HomePage.jsx
 
 │   ├── service/
 │       ├── mockApi.js
