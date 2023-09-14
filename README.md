@@ -75,24 +75,24 @@ Follow these steps to set up and run the Employee Management Application locally
 
 ### Usage
 
-Creating Employees
+1. Creating Employees
 
 Click the "Create Employee" button to open the employee creation form.
 Fill in the required details (First Name, Last Name, etc.).
 Click the "Submit" button to create a new employee record.
 A confirmation success message will be displaid in a modal.
 
-Searching for Employees
+2. Searching for Employees
 
 Use the search bar to search for employees by name, department, zip code, or other criteria.
 The table will display the search results in real-time as you type.
 
-Sorting Employees
+3. Sorting Employees
 
 Click on the column headers in the employee list table to sort employees by that column (e.g., "First Name" or "Start Date").
 Click the column header again to reverse the sorting order.
 
-Show demo data for Employees
+4. Show demo data for Employees
 
 Click on Demo data button to load some data from a mock service. A confirmation success message will be displaid in a modal.
 Click on Clear data button to delete Employee list from demo data.

@@ -19,7 +19,7 @@
 }
 
 .form-label {
-  color: var(--white);
+  color: black;
 }
 
 @media (min-width: 415px) {
