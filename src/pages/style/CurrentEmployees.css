@@ -83,6 +83,10 @@
 .demo-buttons {
   margin-bottom: 30px;
 }
+.demo-buttons button {
+  padding: 4px;
+  font-weight: 700;
+}
 
 .no-result {
   text-align: center !important;
