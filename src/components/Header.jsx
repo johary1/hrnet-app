@@ -10,47 +10,28 @@ const Header = () => {
         <span className="logo__title">WEALTH HEALTH</span>
       </Link>
 
-      {/* <div className="navigation">
+      <div className="navigation">
         <ul>
-          <NavLink
-            to="/createemployee"
-            className={(nav) => (nav.isActive ? "nav-active" : "")}
-          >
-            <li>Create employee</li>
-          </NavLink>
-          <NavLink
-            to="/currentemployees"
-            className={(nav) => (nav.isActive ? "nav-active" : "")}
-          >
-            <li>Current employees</li>
-          </NavLink>
+          <li>
+            <NavLink
+              to="/createemployee"
+              className={(nav) => (nav.isActive ? "nav-active" : "")}
+              aria-current={(nav) => (nav.isActive ? "page" : null)}
+            >
+              Create employee
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/currentemployees"
+              className={(nav) => (nav.isActive ? "nav-active" : "")}
+              aria-current={(nav) => (nav.isActive ? "page" : null)}
+            >
+              Current employees
+            </NavLink>
+          </li>
         </ul>
-      </div> */}
-<div className="navigation">
-  <ul>
-    <li>
-      <NavLink
-        to="/createemployee"
-        className={(nav) => (nav.isActive ? "nav-active" : "")}
-        aria-current={(nav) => (nav.isActive ? "page" : null)}
-      >
-        Create employee
-      </NavLink>
-    </li>
-    <li>
-      <NavLink
-        to="/currentemployees"
-        className={(nav) => (nav.isActive ? "nav-active" : "")}
-        aria-current={(nav) => (nav.isActive ? "page" : null)}
-      >
-        Current employees
-      </NavLink>
-    </li>
-  </ul>
-</div>
-
-
-
+      </div>
     </div>
   );
 };
