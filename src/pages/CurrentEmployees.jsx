@@ -13,7 +13,7 @@ import "./style/CustomModal.css";
 const CurrentEmployees = () => {
   const { employees,addEmployee } = useEmployeeContext();// Use the context hook to get employees data
   const [currentPage, setCurrentPage] = useState(1);
-  const [employeesPerPage, setEmployeesPerPage] = useState(5);
+  const [employeesPerPage, setEmployeesPerPage] = useState(10);
 
   const [sortedEmployees, setSortedEmployees] = useState([]);
   const handleCloseModal = () => {
